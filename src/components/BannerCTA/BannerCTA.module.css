@@ -1,0 +1,33 @@
+.wrapper {
+  height: 200px;
+  background-color: var(--color-primary-darkViolet);
+  background-image: url('../../assets/bg-boost-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.wrapper h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/*
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--color-primary-darkViolet);
+  background-image: url('../../assets/bg-shorten-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 80px;
+  border-radius: var(--border-radius);
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 20px;
+*/

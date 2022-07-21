@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 :root {
   --color-primary-cyan: hsl(180, 66%, 49%);
@@ -10,6 +10,14 @@
   --color-neutral-grayishViolet: hsl(257, 7%, 63%);
   --color-neutral-darkBlue: hsl(255, 11%, 22%);
   --color-neutral-darkViolet: hsl(260, 8%, 14%);
+
+  --font-size: 1.125rem; /* 18 px */
+
+  --margin-x: 6.25rem; /* 100 px */
+
+  --margin-y: 1.875rem; /* 30 px */
+
+  --border-radius: 10px;
 }
 
 /* Box sizing rules */
@@ -34,8 +42,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -49,7 +57,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */

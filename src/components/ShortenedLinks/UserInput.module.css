@@ -1,0 +1,55 @@
+.form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--color-primary-darkViolet);
+  background-image: url('../../assets/bg-shorten-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 80px;
+  border-radius: var(--border-radius);
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  font-size: var(--font-size);
+  outline: none;
+  border: 2px solid var(--color-secondary-red);
+  color: var(--color-neutral-darkViolet);
+}
+
+.input::placeholder {
+  color: var(--color-secondary-red);
+}
+
+.error-message {
+  color: var(--color-secondary-red);
+  font-size: 16px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  font-style: italic;
+}
+
+.button {
+  border: none;
+  background-color: var(--color-primary-cyan);
+  font-size: var(--font-size);
+  padding: 15px 40px;
+  border-radius: var(--border-radius);
+  text-transform: capitalize;
+  color: #ffffff;
+  transition: 0.3s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 73%, 71%);
+}

@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 0 100px;
+  /* transform: translateX(100px); */
+  margin-bottom: calc(var(--margin-x) - var(--margin-x) / 2);
+  margin-left: var(--margin-x);
+}
+
+.hero-text h1 {
+  font-size: calc(var(--font-size) + 42px);
+  font-weight: 700;
+  color: var(--color-neutral-darkViolet);
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: var(--font-size);
+  color: var(--color-neutral-grayishViolet);
+  margin-bottom: var(--margin-y);
+}

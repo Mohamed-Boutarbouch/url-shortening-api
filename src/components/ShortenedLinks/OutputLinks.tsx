@@ -10,11 +10,11 @@ interface Props {
   };
 }
 
-const OutputLinks: React.FC<Props> = ({ data }) => {
+const OutputLinks: React.FC<Props> = () => {
   return (
     <div className={styles.container}>
-      <p className={styles['original-link']}>{data?.result?.original_link}</p>
-      <p className={styles['shortened-link']}>{data?.result?.full_short_link}</p>
+      <p className={styles['original-link']}>https://www.google.com/</p>
+      <p className={styles['shortened-link']}>https://shrtco.de/KCveN</p>
       <CopyButton>copy</CopyButton>
     </div>
   );

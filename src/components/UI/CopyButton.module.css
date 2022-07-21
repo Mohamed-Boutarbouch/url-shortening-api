@@ -1,0 +1,17 @@
+.button {
+  border: none;
+  background-color: var(--color-primary-cyan);
+  font-size: var(--font-size);
+  padding: 8px 40px;
+  border-radius: var(--border-radius);
+  text-transform: capitalize;
+  color: #ffffff;
+  transition: 0.3s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 73%, 71%);
+}

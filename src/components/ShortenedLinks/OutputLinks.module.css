@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 40px;
+  border-radius: var(--border-radius);
+  padding-bottom: 15px;
+}
+
+.original-link {
+  font-size: var(--font-size);
+}
+
+.shortened-link {
+  font-size: var(--font-size);
+  color: var(--color-primary-cyan);
+}
