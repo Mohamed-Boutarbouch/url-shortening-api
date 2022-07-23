@@ -19,11 +19,14 @@
   border-radius: 1rem;
   font-size: var(--font-size);
   outline: none;
-  border: 2px solid var(--color-secondary-red);
   color: var(--color-neutral-darkViolet);
 }
 
-.input::placeholder {
+.input:invalid {
+  border: 3px solid var(--color-secondary-red);
+}
+
+.input:invalid::placeholder {
   color: var(--color-secondary-red);
 }
 
@@ -34,6 +37,11 @@
   top: 100px;
   left: 100px;
   font-style: italic;
+  display: none;
+}
+
+.input:invalid .error-message {
+  display: block;
 }
 
 .button {

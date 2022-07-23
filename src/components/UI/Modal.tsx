@@ -1,43 +1,51 @@
-import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 interface Props {
   children: React.ReactNode;
 }
 
+const ModalOverlay: React.FC<Props> = ({ children }: Props) => {
+  return <section>{children}</section>;
+};
+
+const portalElement = document.getElementById('modal');
+
 const Modal: React.FC<Props> = ({ children }: Props) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    return () => setMounted(false);
-  }, []);
-
-  return mounted ? createPortal(children, document.querySelector('#my-portal')!) : null;
-
-  // return mounted
-  //   ? (createPortal(
-  //       children,
-  //       document.querySelector("#my-portal")
-  //     ) as HTMLElement)
-  //   : null;
+  return createPortal(<ModalOverlay>{children}</ModalOverlay>, portalElement!);
 };
 
 export default Modal;
 
-// import styles from "../../styles/Modal.module.css";
+// import React, { useRef, useEffect } from "react";
 
-// interface Props {
-//   children: React.ReactNode;
+// /**
+//  * Hook that alerts clicks outside of the passed ref
+//  */
+// function useOutsideAlerter(ref) {
+//   useEffect(() => {
+//     /**
+//      * Alert if clicked on outside of element
+//      */
+//     function handleClickOutside(event) {
+//       if (ref.current && !ref.current.contains(event.target)) {
+//         alert("You clicked outside of me!");
+//       }
+//     }
+//     // Bind the event listener
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => {
+//       // Unbind the event listener on clean up
+//       document.removeEventListener("mousedown", handleClickOutside);
+//     };
+//   }, [ref]);
 // }
 
-// const Modal: React.FC<Props> = ({ children }: Props) => {
-//   return (
-//     <section className={styles.modal}>
-//       {children}
-//     </section>
-//   );
-// };
+// /**
+//  * Component that alerts if you click outside of it
+//  */
+// export default function OutsideAlerter(props) {
+//   const wrapperRef = useRef(null);
+//   useOutsideAlerter(wrapperRef);
 
-// export default Modal;
+//   return <div ref={wrapperRef}>{props.children}</div>;
+// }

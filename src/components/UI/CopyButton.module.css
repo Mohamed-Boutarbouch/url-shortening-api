@@ -2,8 +2,8 @@
   border: none;
   background-color: var(--color-primary-cyan);
   font-size: var(--font-size);
-  padding: 8px 40px;
-  border-radius: var(--border-radius);
+  padding: 6px 30px;
+  border-radius: 6px;
   text-transform: capitalize;
   color: #ffffff;
   transition: 0.3s;

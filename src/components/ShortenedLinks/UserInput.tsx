@@ -3,10 +3,9 @@ import styles from './UserInput.module.css';
 
 interface Props {
   setUserLink: (val: string) => void;
-  refetch: () => void;
 }
 
-const UserInput: React.FC<Props> = ({ setUserLink, refetch }) => {
+const UserInput: React.FC<Props> = ({ setUserLink }) => {
   const [enteredLink, setEnteredLink] = useState('');
 
   const inputLinkHandler = (event: SyntheticEvent) => {
@@ -19,7 +18,6 @@ const UserInput: React.FC<Props> = ({ setUserLink, refetch }) => {
     event.preventDefault();
 
     setUserLink(enteredLink);
-    refetch();
     setEnteredLink('');
   };
 

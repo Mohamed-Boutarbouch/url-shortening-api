@@ -17,7 +17,7 @@ const Footer = () => {
               {links.map((link) => {
                 const { label } = link;
                 return (
-                  <li>
+                  <li key={label}>
                     <a href="/">{label}</a>
                   </li>
                 );
