@@ -37,6 +37,7 @@ const ShortenedLinks = () => {
         setShortenedLinkList((prevState) => [...prevState, data]);
       } catch (error) {
         const err = error as AxiosError;
+        // eslint-disable-next-line no-console
         console.log(err.response?.data);
       }
     };
@@ -48,8 +49,6 @@ const ShortenedLinks = () => {
     <main className={styles.main}>
       <UserInput setUserLink={setUserLink} />
       <OutputLinks shortenedLinksList={shortenedLinkList} />
-      {/* data={data} */}
-      <div className={styles.tst} />
     </main>
   );
 };

@@ -1,9 +1,13 @@
 import { SyntheticEvent, useState } from 'react';
+// import { Spinner } from 'phosphor-react';
+
 import styles from './UserInput.module.css';
 
 interface Props {
   setUserLink: (val: string) => void;
 }
+
+// <Spinner size={28} />
 
 const UserInput: React.FC<Props> = ({ setUserLink }) => {
   const [enteredLink, setEnteredLink] = useState('');
