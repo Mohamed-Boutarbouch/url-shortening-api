@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { List } from 'phosphor-react';
+import { List, X } from 'phosphor-react';
 import styles from './Navbar.module.css';
 import Logo from '../../assets/logo.svg';
 import { navbarLinks } from '../../data/data';
@@ -8,6 +8,8 @@ import Modal from '../UI/Modal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const onClose = () => setIsOpen(false);
 
   return (
     <nav className={styles.container}>
@@ -32,9 +34,14 @@ const Navbar = () => {
         <MainButton>sign up</MainButton>
       </div>
 
-      <List size={45} className={styles['list-icon']} onClick={() => setIsOpen(!isOpen)} />
+      {isOpen ? (
+        <X size={45} className={styles['list-icon']} onClick={() => setIsOpen(!isOpen)} />
+      ) : (
+        <List size={45} className={styles['list-icon']} onClick={() => setIsOpen(!isOpen)} />
+      )}
+
       {isOpen && (
-        <Modal>
+        <Modal onClose={onClose}>
           <div className={styles.modal}>
             <ul className={styles['mobile-links']}>
               {navbarLinks.map((link, index) => {

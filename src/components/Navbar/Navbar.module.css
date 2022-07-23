@@ -11,6 +11,7 @@
 .list-icon {
   cursor: pointer;
   color: var(--color-neutral-grayishViolet);
+  z-index: 10;
 }
 
 .links {
@@ -74,7 +75,7 @@
   text-align: center;
   border-radius: var(--border-radius);
   position: absolute;
-  top: 120px;
+  top: 90px;
   left: var(--margin-x);
   position: fixed;
   z-index: 10;
