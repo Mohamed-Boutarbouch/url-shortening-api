@@ -7,7 +7,6 @@ interface ModalOverlayProps {
 }
 
 interface BackdropProps {
-  // onClose: (val: boolean) => void;
   onClose: React.MouseEventHandler<HTMLDivElement>;
 }
 

@@ -22,7 +22,7 @@
   color: var(--color-neutral-darkViolet);
 }
 
-.input:invalid {
+.input.input-error {
   border: 3px solid var(--color-secondary-red);
 }
 
@@ -30,7 +30,7 @@
   border: 3px solid var(--color-primary-cyan);
 }
 
-.input:invalid::placeholder {
+.input.input-error::placeholder {
   color: var(--color-secondary-red);
 }
 
@@ -41,11 +41,6 @@
   top: 100px;
   left: 100px;
   font-style: italic;
-  display: none;
-}
-
-.input:invalid .error-message {
-  display: block;
 }
 
 .button {
@@ -64,4 +59,23 @@
 .button:hover {
   cursor: pointer;
   background-color: hsl(180, 73%, 71%);
+}
+
+.button:disabled {
+  background-color: var(--color-neutral-gray);
+  color: var(--color-neutral-darkViolet);
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: logo-spin infinite 1s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

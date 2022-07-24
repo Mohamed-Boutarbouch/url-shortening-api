@@ -15,3 +15,21 @@
   cursor: pointer;
   background-color: hsl(180, 73%, 71%);
 }
+
+.button-copied {
+  border: none;
+  background-color: var(--color-primary-darkViolet);
+  font-size: var(--font-size);
+  padding: 6px 30px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  color: #ffffff;
+  transition: 0.3s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.button-copied:hover {
+  cursor: pointer;
+  background-color: hsl(257, 17%, 55%);
+}

@@ -22,8 +22,6 @@ type Props = {
 };
 
 const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
-  console.log(shortenedLinksList);
-
   return (
     <div className={styles.wrapper}>
       {shortenedLinksList.map((link) => {
@@ -34,7 +32,7 @@ const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
             <p className={styles['original-link']}>{originalLink.substring(0, 50)}...</p>
             <div className={styles['short-link-wrapper']}>
               <p className={styles['shortened-link']}>{fullShortLink}</p>
-              <CopyButton>copy</CopyButton>
+              <CopyButton shortLink={fullShortLink} />
             </div>
           </div>
         );
