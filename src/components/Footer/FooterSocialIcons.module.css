@@ -1,0 +1,21 @@
+.icons {
+  align-self: flex-start;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.icon {
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.icons .icon:hover {
+  fill: var(--color-primary-cyan);
+}
+
+/* .icon:hover {
+  fill: var(--color-primary-cyan);
+} */

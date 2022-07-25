@@ -60,27 +60,3 @@ export const footerData: FooterTypes[] = [
     links: [{ label: 'about' }, { label: 'our team' }, { label: 'careers' }, { label: 'contact' }],
   },
 ];
-
-interface FooterIconTypes {
-  id: string;
-  icon: string;
-}
-
-export const footerIcons:FooterIconTypes[] = [
-  {
-    id: 'facebook',
-    icon: icon4,
-  },
-  {
-    id: 'twitter',
-    icon: icon5,
-  },
-  {
-    id: 'pinterest',
-    icon: icon6,
-  },
-  {
-    id: 'instagram',
-    icon: icon7,
-  },
-];

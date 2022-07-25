@@ -1,13 +1,13 @@
 import styles from './Footer.module.css';
 import Logo from '../../assets/logo.svg';
-import { footerData, footerIcons } from '../../data/data';
+import { footerData } from '../../data/data';
+import FooterSocialIcons from './FooterSocialIcons';
+import FooterLogo from './FooterLogo';
 
 const Footer = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.logo}>
-        <img src={Logo} alt="/" />
-      </div>
+      <FooterLogo />
       {footerData.map((footerLinks) => {
         const { heading, links } = footerLinks;
         return (
@@ -26,16 +26,7 @@ const Footer = () => {
           </div>
         );
       })}
-      <div className={styles['social-icons']}>
-        {footerIcons.map((icons) => {
-          const { id, icon } = icons;
-          return (
-            <div key={id}>
-              <img src={icon} alt="/" />
-            </div>
-          );
-        })}
-      </div>
+      <FooterSocialIcons />
     </div>
   );
 };

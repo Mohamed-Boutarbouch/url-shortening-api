@@ -2,14 +2,8 @@
   background-color: var(--color-neutral-darkViolet);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: var(--margin-y) var(--margin-x);
+  padding: var(--margin-x);
 }
-
-/* LOGO */
-
-/* .logo img {
-  fill: #fff;
-} */
 
 /* LINKS */
 
@@ -30,22 +24,10 @@
   text-decoration: none;
   text-transform: capitalize;
   color: var(--color-neutral-grayishViolet);
-  line-height: 1.8;
+  line-height: 2.3;
   transition: 0.3s;
 }
 
 .links-wrapper li a:hover {
-  text-decoration: underline;
-  color: var(--color-neutral-gray);
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons div img:hover {
-  fill: var(--color-primary-cyan);
-  cursor: pointer;
+  color: var(--color-primary-cyan);
 }

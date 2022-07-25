@@ -12,7 +12,6 @@ const Advanced = () => {
       </div>
 
       <div className={styles.container}>
-        <div className={styles['decorative-thing']} />
         {advancedData.map((feature) => {
           const { id, icon, heading, body } = feature;
           return (
@@ -25,6 +24,7 @@ const Advanced = () => {
             </div>
           );
         })}
+        <div className={styles['decorative-thing']} />
       </div>
       <div className={styles.tst} />
     </div>
