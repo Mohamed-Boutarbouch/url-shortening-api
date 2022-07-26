@@ -5,14 +5,14 @@
 
 .wrapper {
   margin: 0 auto;
-  padding-top: var(--margin-x);
+  padding-top: 40px;
   padding-bottom: var(--margin-x);
   text-align: center;
-  max-width: 38%;
+  max-width: 45vw;
 }
 
 .header {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--color-neutral-darkViolet);
   line-height: 1.1;
@@ -55,7 +55,7 @@
   z-index: 1;
 
   padding-bottom: -50px;
-  
+
   position: relative;
 }
 
@@ -87,4 +87,36 @@
 
 .card p {
   color: var(--color-neutral-grayishViolet);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+  }
+
+  .decorative-thing {
+    height: 90%;
+    width: 10px;
+
+    position: absolute;
+    top: 0px;
+    left: 50%;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .icons {
+    position: absolute;
+    top: -50px;
+    left: 42.5%;
+  }
+
+  .wrapper {
+    max-width: 90vw;
+  }
 }

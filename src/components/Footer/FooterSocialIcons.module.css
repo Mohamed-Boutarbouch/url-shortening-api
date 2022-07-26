@@ -16,6 +16,13 @@
   fill: var(--color-primary-cyan);
 }
 
-/* .icon:hover {
-  fill: var(--color-primary-cyan);
-} */
+@media screen and (max-width: 800px) {
+  .icons {  
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+  }
+}

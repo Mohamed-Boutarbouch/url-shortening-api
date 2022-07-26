@@ -8,6 +8,7 @@
   color: #ffffff;
   transition: 0.3s;
   font-family: inherit;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -20,6 +21,7 @@
   border: none;
   background-color: var(--color-primary-darkViolet);
   font-size: var(--font-size);
+  font-weight: 700;
   padding: 6px 30px;
   border-radius: 6px;
   text-transform: capitalize;
@@ -32,4 +34,17 @@
 .button-copied:hover {
   cursor: pointer;
   background-color: hsl(257, 17%, 55%);
+}
+
+
+@media screen and (max-width: 800px) {
+  .button{
+    align-self: center;
+    width: 100%;
+  }
+
+  .button-copied{
+    align-self: center;
+    width: 100%;
+  }
 }

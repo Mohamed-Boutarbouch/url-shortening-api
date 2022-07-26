@@ -3,9 +3,9 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 0 100px;
-  /* transform: translateX(100px); */
-  margin-bottom: calc(var(--margin-x) - var(--margin-x) / 2);
+  margin-bottom: var(--margin-x);
   margin-left: var(--margin-x);
+  overflow-x: hidden;
 }
 
 .hero-text h1 {
@@ -19,4 +19,17 @@
   font-size: var(--font-size);
   color: var(--color-neutral-grayishViolet);
   margin-bottom: var(--margin-y);
+}
+
+.hero-illustration {
+  transform: translateX(110px);
+  overflow-x: hidden;
+  transition: right 0.2s ease-out;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

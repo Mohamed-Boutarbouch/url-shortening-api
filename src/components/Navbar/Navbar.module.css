@@ -4,6 +4,7 @@
   align-items: center;
   margin: var(--margin-y) var(--margin-x);
 }
+
 .logo {
   cursor: pointer;
 }
@@ -32,6 +33,7 @@
 .links a {
   text-decoration: none;
   text-transform: capitalize;
+  font-weight: 700;
   margin-right: 40px;
   color: var(--color-neutral-grayishViolet);
   transition: 0.3s;
@@ -52,6 +54,7 @@
   text-transform: capitalize;
   font-family: inherit;
   margin-right: 20px;
+  font-weight: 700;
   color: var(--color-neutral-grayishViolet);
   transition: 0.3s;
 }

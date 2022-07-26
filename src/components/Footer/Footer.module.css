@@ -31,3 +31,12 @@
 .links-wrapper li a:hover {
   color: var(--color-primary-cyan);
 }
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}

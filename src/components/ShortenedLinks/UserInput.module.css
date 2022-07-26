@@ -11,6 +11,8 @@
   gap: 20px;
   position: relative;
   margin-bottom: 20px;
+
+  transform: translateY(-70px);
 }
 
 .input {
@@ -43,6 +45,10 @@
   font-style: italic;
 }
 
+.error-message br {
+  display: none;
+}
+
 .button {
   border: none;
   background-color: var(--color-primary-cyan);
@@ -53,6 +59,7 @@
   color: #ffffff;
   transition: 0.3s;
   font-family: inherit;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -77,5 +84,29 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    background-image: url('../../assets/bg-shorten-mobile.svg');
+    padding: 20px 40px;
+  }
+
+  .input {
+    height: 70px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: var(--font-size);
+    outline: none;
+    color: var(--color-neutral-darkViolet);
+  }
+
+  .error-message br {
+    display: block;
   }
 }

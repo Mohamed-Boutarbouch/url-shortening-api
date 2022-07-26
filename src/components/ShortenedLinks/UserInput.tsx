@@ -51,8 +51,8 @@ const UserInput: React.FC<Props> = ({ setUserLink, isLoading, linkError, setLink
           setLinkError(false);
         }}
       />
-      {isValidationError && <p className={styles['error-message']}>Please add a valid link</p>}
-      {linkError && <p className={styles['error-message']}>This link you entered is blacklisted, please add another link</p>}
+      {isValidationError && <p className={styles['error-message']}>Please add a valid link.</p>}
+      {linkError && <p className={styles['error-message']}>This link you entered is blacklisted. <br /> Please add another link.</p>}
       <button type="submit" className={styles.button} disabled={isLoading}>
         {isLoading ? <CircleNotch size={28} className={styles.spinner} /> : 'shorten it!'}
       </button>

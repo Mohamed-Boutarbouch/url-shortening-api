@@ -26,14 +26,13 @@ const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
     <div className={styles.wrapper}>
       {shortenedLinksList.map((link) => {
         const { result } = link;
-        const { code, original_link: originalLink, full_short_link: fullShortLink } = result;
+        const { code: id, original_link: originalLink, full_short_link: fullShortLink } = result;
         return (
-          <div key={code} className={styles.container}>
+          <div key={id} className={styles.container}>
             <p className={styles['original-link']}>{originalLink.substring(0, 50)}...</p>
-            <div className={styles['short-link-wrapper']}>
-              <p className={styles['shortened-link']}>{fullShortLink}</p>
-              <CopyButton shortLink={fullShortLink} />
-            </div>
+            <hr className={styles.hr} />
+            <p className={styles['shortened-link']}>{fullShortLink}</p>
+            <CopyButton shortLink={fullShortLink} />
           </div>
         );
       })}
