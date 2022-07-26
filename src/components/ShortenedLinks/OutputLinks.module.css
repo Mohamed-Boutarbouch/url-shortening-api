@@ -1,7 +1,6 @@
 .container {
   display: grid;
   grid-template-columns: 5fr 1fr;
-  /* justify-content: space-between; */
   align-items: center;
   background-color: #fff;
   padding: 15px 40px;
@@ -23,6 +22,9 @@
 
 .original-link {
   font-size: var(--font-size);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .hr {
@@ -42,6 +44,10 @@
     justify-content: space-evenly;
     padding: 20px;
     gap: 8px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     transform: translateY(-110px);
   }
@@ -49,7 +55,6 @@
   .hr {
     display: block;
     width: 100%;
-    /* transform: translateX(-40px); */
     border-color: hsl(225deg 33% 95%);
   }
 

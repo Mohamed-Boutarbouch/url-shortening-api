@@ -24,9 +24,17 @@ interface Result {
   original_link: string;
 }
 
+const getLocalStorage = () => {
+  const LinkList = localStorage.getItem('LINKS');
+  if (LinkList) {
+    return JSON.parse(localStorage.getItem('LINKS') || 'false');
+  }
+  return [];
+};
+
 const ShortenedLinks = () => {
   const [userLink, setUserLink] = useState<string>('');
-  const [shortenedLinkList, setShortenedLinkList] = useState<ApiTypes[]>([]);
+  const [shortenedLinkList, setShortenedLinkList] = useState<ApiTypes[]>(getLocalStorage());
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isDisallowedLinkError, setIsDisallowedLinkError] = useState<boolean>(false);
 
@@ -55,6 +63,10 @@ const ShortenedLinks = () => {
 
     getLinkShortener(userLink);
   }, [userLink]);
+
+  useEffect(() => {
+    window.localStorage.setItem('LINKS', JSON.stringify(shortenedLinkList));
+  }, [shortenedLinkList]);
 
   return (
     <main className={styles.main}>

@@ -141,7 +141,7 @@
 
 /* ----- BREAKPOINTS ----- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .modal {
     width: calc(100vw - 100px);
 
