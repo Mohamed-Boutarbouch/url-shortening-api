@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 0 100px;
   margin-bottom: var(--margin-x);
   margin-left: var(--margin-x);
   overflow-x: hidden;
@@ -25,11 +24,37 @@
   transform: translateX(110px);
   overflow-x: hidden;
   transition: right 0.2s ease-out;
+  min-width: 554px;
+  min-height: 364.281px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .container {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+
+    margin-left: 30px;
+    margin-bottom: 180px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-illustration {
+    min-width: 554px;
+    min-height: 364.281px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-right: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    margin-top: 40px;
   }
 }

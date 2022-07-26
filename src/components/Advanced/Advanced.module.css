@@ -54,8 +54,6 @@
   border-radius: var(--border-radius);
   z-index: 1;
 
-  padding-bottom: -50px;
-
   position: relative;
 }
 
@@ -106,6 +104,10 @@
     left: 50%;
   }
 
+  .container {
+    margin: 20px 30px;
+  }
+
   .card {
     text-align: center;
   }
@@ -118,5 +120,14 @@
 
   .wrapper {
     max-width: 90vw;
+    transform: translateY(-30px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .icons {
+    position: absolute;
+    top: -50px;
+    left: 37%;
   }
 }

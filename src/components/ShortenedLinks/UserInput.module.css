@@ -22,6 +22,7 @@
   font-size: var(--font-size);
   outline: none;
   color: var(--color-neutral-darkViolet);
+  transition: 0.3s;
 }
 
 .input.input-error {
@@ -94,6 +95,8 @@
     gap: 55px;
     background-image: url('../../assets/bg-shorten-mobile.svg');
     padding: 20px 40px;
+
+    transform: translateY(-110px);
   }
 
   .input {

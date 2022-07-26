@@ -29,10 +29,12 @@ const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
         const { code: id, original_link: originalLink, full_short_link: fullShortLink } = result;
         return (
           <div key={id} className={styles.container}>
-            <p className={styles['original-link']}>{originalLink.substring(0, 50)}...</p>
+            <p className={styles['original-link']}>{originalLink}...</p>
             <hr className={styles.hr} />
-            <p className={styles['shortened-link']}>{fullShortLink}</p>
-            <CopyButton shortLink={fullShortLink} />
+            <div className={styles['short-link-wrapper']}>
+              <p className={styles['shortened-link']}>{fullShortLink}</p>
+              <CopyButton shortLink={fullShortLink} />
+            </div>
           </div>
         );
       })}

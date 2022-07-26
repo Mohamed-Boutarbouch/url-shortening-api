@@ -1,5 +1,7 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  /* justify-content: space-between; */
   align-items: center;
   background-color: #fff;
   padding: 15px 40px;
@@ -16,6 +18,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  width: 100%;
 }
 
 .original-link {
@@ -39,12 +42,24 @@
     justify-content: space-evenly;
     padding: 20px;
     gap: 8px;
+
+    transform: translateY(-110px);
   }
 
   .hr {
     display: block;
-    width: 120%;
-    transform: translateX(-40px);
+    width: 100%;
+    /* transform: translateX(-40px); */
     border-color: hsl(225deg 33% 95%);
+  }
+
+  .short-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .shortened-link {
+    align-self: start;
   }
 }

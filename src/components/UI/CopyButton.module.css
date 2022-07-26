@@ -39,12 +39,10 @@
 
 @media screen and (max-width: 800px) {
   .button{
-    align-self: center;
     width: 100%;
   }
 
   .button-copied{
-    align-self: center;
     width: 100%;
   }
 }

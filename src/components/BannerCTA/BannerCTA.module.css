@@ -17,10 +17,12 @@
   font-weight: 700;
 }
 
-
 @media screen and (max-width: 800px) {
   .wrapper {
     background-image: url('../../assets/bg-boost-mobile.svg');
+  }
 
+  .wrapper h3 {
+    font-size: 30px;
   }
 }
