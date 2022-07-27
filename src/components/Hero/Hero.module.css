@@ -26,6 +26,7 @@
   transition: right 0.2s ease-out;
   min-width: 554px;
   min-height: 364.281px;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1000px) {
@@ -51,6 +52,7 @@
 
   .hero-text {
     margin-right: 30px;
+    padding-bottom: 10px;
   }
 
   .hero-text h1 {

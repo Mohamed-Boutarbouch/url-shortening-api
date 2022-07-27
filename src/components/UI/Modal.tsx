@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-
+import { motion } from 'framer-motion';
 import styles from './Modal.module.css';
 
 interface ModalOverlayProps {
@@ -20,7 +20,15 @@ const Backdrop: React.FC<BackdropProps> = ({ onClose }: BackdropProps) => {
 };
 
 const ModalOverlay: React.FC<ModalOverlayProps> = ({ children }: ModalOverlayProps) => {
-  return <aside>{children}</aside>;
+  return (
+    <motion.div
+      className={styles['modal-wrapper']}
+      initial={{ opacity: 0, y: '-100px' }}
+      animate={{ opacity: 1, y: '-15px' }}
+    >
+      {children}
+    </motion.div>
+  );
 };
 
 const portalElement = document.getElementById('modal')!;

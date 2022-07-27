@@ -6,7 +6,10 @@ interface Props {
 
 const MainButton: React.FC<Props> = ({ children }: Props) => {
   return (
-    <button type="button" className={styles.button}>
+    <button
+      type="button"
+      className={styles.button}
+    >
       {children}
     </button>
   );

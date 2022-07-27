@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { List, X } from 'phosphor-react';
 import styles from './Navbar.module.css';
 import Logo from '../../assets/logo.svg';
@@ -12,7 +13,17 @@ const Navbar = () => {
   const onClose = () => setIsOpen(false);
 
   return (
-    <nav className={styles.container}>
+    <motion.nav
+      className={styles.container}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          type: 'tween',
+          duration: 0.6,
+        },
+      }}
+    >
       <div className={styles.links}>
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
@@ -62,7 +73,7 @@ const Navbar = () => {
           </div>
         </Modal>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
