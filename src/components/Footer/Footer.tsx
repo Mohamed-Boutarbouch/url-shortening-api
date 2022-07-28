@@ -1,12 +1,11 @@
 import styles from './Footer.module.css';
-import Logo from '../../assets/logo.svg';
 import { footerData } from '../../data/data';
 import FooterSocialIcons from './FooterSocialIcons';
 import FooterLogo from './FooterLogo';
 
 const Footer = () => {
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <FooterLogo />
       {footerData.map((footerLinks) => {
         const { heading, links } = footerLinks;
@@ -27,7 +26,7 @@ const Footer = () => {
         );
       })}
       <FooterSocialIcons />
-    </div>
+    </footer>
   );
 };
 

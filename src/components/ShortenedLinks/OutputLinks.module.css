@@ -1,3 +1,8 @@
+.wrapper {
+  /* overflow: hidden; */
+  z-index: 2;
+}
+
 .container {
   display: grid;
   grid-template-columns: 5fr 1fr;

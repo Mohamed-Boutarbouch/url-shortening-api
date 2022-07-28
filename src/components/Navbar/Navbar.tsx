@@ -24,7 +24,7 @@ const Navbar = () => {
         },
       }}
     >
-      <div className={styles.links}>
+      <header className={styles.links}>
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
         </div>
@@ -37,7 +37,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-      </div>
+      </header>
       <div className={styles.buttons}>
         <button type="button" className={styles.button}>
           login

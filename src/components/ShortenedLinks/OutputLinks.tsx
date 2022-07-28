@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from './OutputLinks.module.css';
 import CopyButton from '../UI/CopyButton';
 
@@ -23,22 +24,36 @@ type Props = {
 
 const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
   return (
-    <div className={styles.wrapper}>
-      {shortenedLinksList.map((link) => {
+    <section className={styles.wrapper}>
+      {shortenedLinksList.map((link, i) => {
         const { result } = link;
         const { code: id, original_link: originalLink, full_short_link: fullShortLink } = result;
         return (
-          <div key={id} className={styles.container}>
+          <motion.article
+            key={id}
+            className={styles.container}
+            initial={{
+              opacity: 0,
+              scale: 0.2,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                duration: i * 0.2,
+              },
+            }}
+          >
             <p className={styles['original-link']}>{originalLink}</p>
             <hr className={styles.hr} />
             <div className={styles['short-link-wrapper']}>
               <p className={styles['shortened-link']}>{fullShortLink}</p>
               <CopyButton shortLink={fullShortLink} />
             </div>
-          </div>
+          </motion.article>
         );
       })}
-    </div>
+    </section>
   );
 };
 

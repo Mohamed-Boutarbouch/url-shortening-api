@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import styles from './Advanced.module.css';
 import { advancedData } from '../../data/data';
 
 const Advanced = () => {
   return (
-    <div className={styles.background}>
+    <section className={styles.background}>
       <div className={styles.wrapper}>
         <h2 className={styles.header}>advanced statistics</h2>
         <p className={styles.text}>
@@ -12,22 +13,32 @@ const Advanced = () => {
       </div>
 
       <div className={styles.container}>
-        {advancedData.map((feature) => {
+        {advancedData.map((feature, i) => {
           const { id, icon, heading, body } = feature;
           return (
-            <div key={id} className={styles.card}>
+            <motion.article
+              key={id}
+              className={styles.card}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: i * 0.4,
+                },
+              }}
+            >
               <div className={styles.icons}>
                 <img src={icon} alt="*" />
               </div>
               <h3>{heading}</h3>
               <p>{body}</p>
-            </div>
+            </motion.article>
           );
         })}
-        <div className={styles['decorative-thing']} />
+        <span className={styles['decorative-thing']} />
       </div>
       <div className={styles.tst} />
-    </div>
+    </section>
   );
 };
 

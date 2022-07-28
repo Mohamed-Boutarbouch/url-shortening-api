@@ -5,8 +5,9 @@ import MainButton from '../UI/MainButton';
 
 const Hero = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <motion.div
+        className={styles['hero-text']}
         initial={{ opacity: 0, x: '-100px' }}
         whileInView={{
           opacity: 1,
@@ -17,7 +18,6 @@ const Hero = () => {
           },
         }}
         viewport={{ once: true }}
-        className={styles['hero-text']}
       >
         <h1>More than just shorter links</h1>
         <p>
@@ -41,7 +41,7 @@ const Hero = () => {
       >
         <img src={HeroSVG} alt="Hero" />
       </motion.div>
-    </div>
+    </section>
   );
 };
 

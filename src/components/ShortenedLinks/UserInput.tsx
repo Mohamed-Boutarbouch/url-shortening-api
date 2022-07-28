@@ -1,4 +1,6 @@
+/* eslint-disable operator-linebreak */
 import { SyntheticEvent, useState } from 'react';
+import { motion } from 'framer-motion';
 import { CircleNotch } from 'phosphor-react';
 
 import styles from './UserInput.module.css';
@@ -14,8 +16,9 @@ const UserInput: React.FC<Props> = ({ setUserLink, isLoading, linkError, setLink
   const [enteredLink, setEnteredLink] = useState('');
   const [isValidationError, setIsValidationError] = useState(false);
 
-  // eslint-disable-next-line no-useless-escape
-  const pattern = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+  const pattern =
+    // eslint-disable-next-line no-useless-escape
+    /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
 
   const urlValidator = pattern.test(enteredLink);
 
@@ -36,10 +39,23 @@ const UserInput: React.FC<Props> = ({ setUserLink, isLoading, linkError, setLink
     return setEnteredLink('');
   };
 
-  const inputStyles = isValidationError || linkError ? `${styles.input} ${styles['input-error']}` : styles.input;
+  const inputStyles =
+    isValidationError || linkError ? `${styles.input} ${styles['input-error']}` : styles.input;
 
   return (
-    <form onSubmit={submitHandler} className={styles.form}>
+    <motion.form
+      onSubmit={submitHandler}
+      className={styles.form}
+      initial={{ opacity: 0, scale: 0.5, translateY: '-70px' }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 0.6,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <input
         type="text"
         className={inputStyles}
@@ -52,11 +68,15 @@ const UserInput: React.FC<Props> = ({ setUserLink, isLoading, linkError, setLink
         }}
       />
       {isValidationError && <p className={styles['error-message']}>Please add a valid link.</p>}
-      {linkError && <p className={styles['error-message']}>This link you entered is blacklisted. <br /> Please add another link.</p>}
+      {linkError && (
+        <p className={styles['error-message']}>
+          This link you entered is blacklisted. <br /> Please add another link.
+        </p>
+      )}
       <button type="submit" className={styles.button} disabled={isLoading}>
         {isLoading ? <CircleNotch size={28} className={styles.spinner} /> : 'shorten it!'}
       </button>
-    </form>
+    </motion.form>
   );
 };
 

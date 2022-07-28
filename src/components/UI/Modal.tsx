@@ -21,13 +21,13 @@ const Backdrop: React.FC<BackdropProps> = ({ onClose }: BackdropProps) => {
 
 const ModalOverlay: React.FC<ModalOverlayProps> = ({ children }: ModalOverlayProps) => {
   return (
-    <motion.div
+    <motion.aside
       className={styles['modal-wrapper']}
       initial={{ opacity: 0, y: '-100px' }}
       animate={{ opacity: 1, y: '-15px' }}
     >
       {children}
-    </motion.div>
+    </motion.aside>
   );
 };
 
