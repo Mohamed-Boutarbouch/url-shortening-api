@@ -95,3 +95,18 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.spinner {
+  animation: logo-spin infinite 1s linear;
+  position: absolute;
+  inset: 50% 0 0 50%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
