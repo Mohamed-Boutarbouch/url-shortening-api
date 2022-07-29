@@ -35,6 +35,7 @@ const OutputLinks: React.FC<Props> = ({ shortenedLinksList }) => {
             initial={{
               opacity: 0,
               scale: 0.2,
+              translateY: '-70px'
             }}
             whileInView={{
               opacity: 1,
