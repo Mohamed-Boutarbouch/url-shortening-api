@@ -41,21 +41,6 @@ const Hero = () => {
       >
         <img src={HeroSVG} alt="Hero" />
       </motion.div>
-      {/* <motion.div
-        className={styles['hero-illustration']}
-        initial={{ opacity: 0, x: '100px' }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            type: 'tween',
-            duration: 0.6,
-          },
-        }}
-        viewport={{ once: true }}
-      >
-        <img src={HeroSVG} alt="Hero" />
-      </motion.div> */}
     </section>
   );
 };
